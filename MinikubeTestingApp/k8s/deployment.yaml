@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: minikubeapp-deployment
+  name: dockerapp-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: minikubeapp
+      app: dockerapp
   template:
     metadata:
       labels:
-        app: minikubeapp
+        app: dockerapp
     spec:
       containers:
-      - name: minikubeapp
-        image: jaintushar2001/minikubeapp:version1  
+      - name: dockerapp
+        image: rajkesarwani59/dockerapp:version1  
         ports:
         - containerPort: 8000
         resources:                                  
